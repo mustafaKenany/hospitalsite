@@ -29,9 +29,13 @@ else
                 <input type="text" name="P_Date" id="P_Date" class="form-control" autocomplete="off" required>
             </div>
        </div>
-       <div class="form-group">
+       <div class="form-group col-md-8 col-xs-12">
             <label for="P_Address">Patient Address</label>
             <input type="text" name="P_Address" id="P_Address" class="form-control" autocomplete="off" required>
+       </div>
+       <div class="form-group col-md-6 col-xs-12">
+            <label for="P_mobile">Mobile</label>
+            <input type="tel" name="P_mobile" id="P_mobile" class="form-control" autocomplete="off" required>
        </div>
         <div class="form-row">
             <legend>Medical Information</legend>
