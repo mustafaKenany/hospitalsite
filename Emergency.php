@@ -13,49 +13,53 @@ else
 
 <div class="container">
 
-    <form action="" method="POST" >
-        <div class="form-row">
+    <form action="include/emergency.inc.php" method="POST" >
+        <div class="row">
             <legend>Perosnal Information</legend>
-            <div class="form-group col-md-6 col-xs-12">
-                <label for="P_Name">Enter Patient Full Name</label>
+            <div class="form-group col-sm">
+                <label for="P_Name">Patient Full Name</label>
                 <input type="text" name="P_Name" id="P_Name" class="form-control" autocomplete="off" required>
             </div>
-            <div class="form-group col-md-3 col-xs-12">
-                <label for="P_Age">Enter Patient Age</label>
+            <div class="form-group col-sm">
+                <label for="P_Age">Patient Age</label>
                 <input type="text" name="P_Age" id="P_Age" class="form-control" autocomplete="off" required>
             </div>
-            <div class="form-group col-md-3 col-xs-12">
-                <label for="P_Date">Enter Patient Birthday</label>
-                <input type="text" name="P_Date" id="P_Date" class="form-control" autocomplete="off" required>
+            <div class="form-group col-sm">
+                <label for="P_Date">Patient Birthday</label>
+                <input type="date" name="P_Date" id="P_Date" class="form-control birthday" autocomplete="off" required data-field="date">
+               
             </div>
        </div>
-       <div class="form-group col-md-8 col-xs-12">
-            <label for="P_Address">Patient Address</label>
-            <input type="text" name="P_Address" id="P_Address" class="form-control" autocomplete="off" required>
+       <div class="row">
+            <div class="form-group col-sm">
+                <label for="P_Address">Patient Address</label>
+                <input type="text" name="P_Address" id="P_Address" class="form-control" autocomplete="off" required>
+                
+            </div>
+            <div class="form-group col-sm">
+                <label for="P_mobile">Mobile</label>
+                <input type="tel" name="P_mobile" id="P_mobile" class="form-control" autocomplete="off" required>
+            </div>
        </div>
-       <div class="form-group col-md-6 col-xs-12">
-            <label for="P_mobile">Mobile</label>
-            <input type="tel" name="P_mobile" id="P_mobile" class="form-control" autocomplete="off" required>
-       </div>
-        <div class="form-row">
+        <div class="row">
             <legend>Medical Information</legend>
-            <div class="form-group col-md-4 col-xs-12">
+            <div class="form-group col-sm">
                 <label for="P_bloodtype">Blood type</label>
-                <input type="text" name="P_bloodType" id="P_bloodType" class="form-control" autocomplete="off" required>
+                <select name="P_bloodtype" id="P_bloodtype" class="form-control bloodType"></select>
+                <!-- <input type="text" name="P_bloodType" id="P_bloodType" class="form-control" autocomplete="off" required> -->
             </div>
-            <div class="form-group col-md-4 col-xs-12">
+            <div class="form-group col-sm">
                 <label for="P_sex">sex</label>
-                <input type="text" name="P_sex" id="P_sex" class="form-control" autocomplete="off" required>
+                <select name="P_sex" id="P_sex" class="form-control sex"></select>
+                <!-- <input type="text" name="P_sex" id="P_sex" class="form-control" autocomplete="off" required> -->
             </div>
-            <div class="form-group col-md-4 col-xs-12">
+            <div class="form-group col-sm">
                 <label for="P_Status">Patient status</label>
                 <input type="text" name="P_Status" id="P_Status" class="form-control" autocomplete="off" required>
             </div>
-           <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-danger">
-                <input type="reset" value="Clear" class="btn btn-success">
-           </div>
        </div>
+       <input type="submit" value="Submit" class="btn btn-danger" name="EmergencySubmit" id="EmergencySubmit">
+       <input type="reset" value="Clear" class="btn btn-success">
     </form>    
     
 </div>

@@ -9,10 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Medical Site</title>
+
 <link rel="stylesheet" href="puplic\css\bootstrap.min.css">
 <link rel="stylesheet" href="puplic\css\font-awesome.min.css">
 <link rel="stylesheet" href="puplic\css\style.css">
-<script src="puplic/js/html5shiv.js"></script>
+
 </head>
 <body>
 <header>
@@ -76,17 +77,33 @@
           <span class="navbar-toggler-icon"></span>
         </button>      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav navbar-nav mr-auto nav justify-content-end">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">New Patient <span class="sr-only">(current)</span></a>
-              <li class="nav-item">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Report<span class="sr-only">(current)</span></a>
-              <li class="nav-item">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Search <span class="sr-only">(current)</span></a>
-              <li class="nav-item">
-          </ul>';
+          <ul class="nav navbar-nav mr-auto nav justify-content-end">';
+
+          switch($_SESSION['user_section'])
+          {
+            case "Emergency Dept":
+            echo '<li class="nav-item active"> <a class="nav-link" href="emergency.php">New Patient <span class="sr-only">(current)</span></a> </li>';
+            
+            break;
+            case "X-Ray Dept":
+           
+            break;
+            case "Blood Bank Dept":
+            echo '<li class="nav-item active"> <a class="nav-link" href="blood-bank.php">New Patient <span class="sr-only">(current)</span></a> </li>';           
+            break;
+            case "CT Scan Dept":
+            
+            break;
+            case "MRI Scan Dept":
+            
+            break;
+          }        
+              
+
+      echo'<li class="nav-item">
+                <a class="nav-link" href="search.php">Search <span class="sr-only">(current)</span></a>
+            </li>
+         </ul>';
       echo '<div style="padding-right:10px">Hello '.$_SESSION['UserFirstName'].' You are login</div>';
       echo '<ul class="nav navbar-nav navbar-right">
               <li class="nav-item">

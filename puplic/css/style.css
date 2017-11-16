@@ -73,3 +73,9 @@ div[data-toggle="buttons"] label.active {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+/* style of Emergency page */
+.sex, .bloodType
+{
+    padding: 5px;
+}
